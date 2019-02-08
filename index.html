@@ -12,36 +12,51 @@
     <button type="button" name="button">Start Quiz!</button>
 
 <!-- Question View -->
-    <h2>What is the capital of the US?</h2>
-    <form action="/answers" method="POST">
-      <fieldset>
-        <input type="radio" name="answer" value="sacremento" id="answer-1">
-        <label for="answer-1">Sacremento</label>
+    <main id="js-quiz-state">
 
-        <input type="radio" name="answer" value="washington-dc" id="answer-2">
-        <label for="answer-2">Washington D.C.</label>
+      <div></div>
+        <h2>What is the capital of the US?</h2>
+        <form action="/answers" method="POST">
+          <fieldset>
+            <input type="radio" name="answer" value="sacremento" id="answer-1">
+            <label for="answer-1">Sacremento</label>
 
-        <input type="radio" name="answer" value="phoenix" id="answer-3">
-        <label for="answer-3">Phoenix</label>
+            <input type="radio" name="answer" value="washington-dc" id="answer-2">
+            <label for="answer-2">Washington D.C.</label>
 
-        <input type="radio" name="answer" value="las-vegas" id="answer-4">
-        <label for="answer-4">Las Vegas</label>
+            <input type="radio" name="answer" value="phoenix" id="answer-3">
+            <label for="answer-3">Phoenix</label>
 
-        <button type="submit" name="submit">Submit</button>
-      </fieldset>
+            <input type="radio" name="answer" value="las-vegas" id="answer-4">
+            <label for="answer-4">Las Vegas</label>
 
-    </form>
+            <button type="submit" name="submit">Submit</button>
+          </fieldset>
+        </form>
+    
 
     <!-- Feedback View - if right -->
-    <h2>You are right!</h2>
-    <button type='submit' name='next-question'>Next question!</button>
+    
+      <h2>You are right!</h2>
+      <button type='submit' name='next-question'>Next question!</button>
+    
 
-    <!-- Feedback View - if wrong -->
-    <h2>You are wrong!</h2>
-    <p>The correct answer is </p>
-    <button type='submit' name='next-question'>Next question!</button>
+      <!-- Feedback View - if wrong -->
+      <h2>You are wrong!</h2>
+      <p>The correct answer is </p>
+      <button type='submit' name='next-question'>Next question!</button>
+    
 
+    <!-- Quiz Results -->
+      <!-- If 7 out of 10 answers correct -->
+      <h2>Great job! You know your capitals!</h2>
+      <button type="submit" name="restart-quiz">Restart Quiz</button>
 
+      <h2>Oh no! You did not get enough answers correct.</h2>
+      <p>Study up on your capitals and try again!</p>
+      <button type="submit" name="restart-quiz"> Restart Quiz</button>
+      
+      </main>
 
   </body>
 </html>
