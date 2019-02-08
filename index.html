@@ -2,26 +2,37 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Country Quiz</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <!-- the header will store the current score and question number information and possibly an icon-->
+    <header>
 
+    </header>
+    <main id="js-quiz-state" role="main">
     <!-- Intro View -->
-  <div class="js-quiz-start">
-    <h1>Country Quiz</h1>
-    <p>Let's test your knowledge on country's capitals!</p>
-    <button type="button" name="button">Start Quiz!</button>
-  </div>
+    <div class="js-quiz-start">
+      <h1>Country Quiz</h1>
+      <p>Let's test your knowledge on country's capitals!</p>
+      <button type="button" name="button">Start Quiz!</button>
+    </div>
 
-<!-- Question View -->
-    <main id="js-quiz-state">
+    <div class="questionAnswerForm js-question-Answer-Form"></div>
 
-      <section class="js-answer-template">
+      <!-- Question View -->
+      <!-- <section class="js-answer-template">
         <h2>What is the capital of the US?</h2>
-        <form action="/answers" method="POST">
+        <form>
           <fieldset>
-            <input type="radio" name="answer" value="sacremento" id="answer-1">
-            <label for="answer-1">Sacremento</label>
+
+            <label class="answerOption">
+              <input type="radio" name="answer" value="sacremento" id="answer-1">
+              <span>Sacremento</span>
+            </label>
+            
+            
 
             <input type="radio" name="answer" value="washington-dc" id="answer-2">
             <label for="answer-2">Washington D.C.</label>
@@ -35,33 +46,41 @@
             <button type="submit" name="submit">Submit</button>
           </fieldset>
         </form>
-      </section>
+      </section> -->
     
 
     <!-- Feedback View - if right -->
-    <section class="js-feedback">
+    <!-- <section class="js-feedback">
       <h2>You are right!</h2>
-      <button type='submit' name='next-question'>Next question!</button>
+      <button type='submit' name='next-question'>Next question!</button> -->
     
 
       <!-- Feedback View - if wrong -->
-      <h2>You are wrong!</h2>
+      <!-- <h2>You are wrong!</h2>
       <p>The correct answer is </p>
       <button type='submit' name='next-question'>Next question!</button>
-    </section>
+    </section> -->
 
-    <!-- Quiz Results -->
-      <!-- If 7 out of 10 answers correct -->
-      <section class="js-quiz-results">
+      <!-- Quiz Results -->
+        <!-- If 7 out of 10 answers correct -->
+      <!-- <section class="js-quiz-results">
         <h2>Great job! You know your capitals!</h2>
         <button type="submit" name="restart-quiz">Restart Quiz</button>
 
         <h2>Oh no! You did not get enough answers correct.</h2>
         <p>Study up on your capitals and try again!</p>
         <button type="submit" name="restart-quiz"> Restart Quiz</button>
-      </section>
-      
-      </main>
+      </section> -->
+
+    </main>
+
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javscript" src="main.js"></script> -->
 
   </body>
 </html>

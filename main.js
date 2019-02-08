@@ -1,4 +1,4 @@
-// Here are our function stubs based on the function example provided below
+// Here are our function stubs based on the function example provided at the bottom of this js file
 
 const QUESTIONS = [];
 const STORE = {};
@@ -12,11 +12,22 @@ const COUNTER = {
 
 //This will listen for the click event on start button and will call the function needed 
 //to load the first question and remove the hardcoded .js-quiz-start div
-function startQuizOnClick(){}
+function startQuizOnClick(){
+  //once the user clicks the start button the the js-quiz-start div will be removed
+  //and the following functions ran to populate the DOM with the first question:
+  loadQuesitonToSTORE();
+  generateQuestion();
+}
+
+//load the next question to the store based on the questionNumber
+function loadQuesitonToSTORE(){
+  //based on the question number the first object in the QUESTIONS array of objects will be
+  //loaded into the store
+}
 
 //form the the HMTL template for a given question and asnwers in the STORE object
 //check to see if the questionNumber is less than or equal to the STORE.length
-//if it is generate the questino based on the questionNumber
+//if it is generate the questino based on the questionNumber 
 //else render the quiz results page
 function generateQuestion(){}
 
@@ -24,12 +35,19 @@ function generateQuestion(){}
 function renderQuestionAnswerText(){}
 
 // on submission of answer check to see if the answer submitted is === to the answer in the STORE
-// object and if it is then run the function to display answer correct incriment the score 
+// object and if it is then run the function to display answer correct & incriment the score 
 // and if the answer is not === to the answer in the STORE object then run the function to display answer incorrect
 function handleAnswerSubmitted(){
     // Retrieve answer identifier of user-checked radio button
     // Perform check: User answer === Correct answer?
     // Update STORE and render appropriate section
+
+    //get the value of the answer selected and assign that to a variable
+    //if the the value of the answer selected is equal to the STORE.correctAnswer
+        renderUserFeedback(generateUserFeedbackCorrect());
+        //and increment the score and apply that to the container in the header that is keeping score
+    //else
+        renderUserFeedback(generateUserFeedbackIncorrect());
 }
 
 //form and return an html template for if the user gets the answer correct 
@@ -39,15 +57,19 @@ function generateUserFeedbackCorrect(){}
 function generateUserFeedbackIncorrect(){}
 
 //depending on the answer submitted the correct or incorrect feedback html will be loaded
-//in the DOM, the next question will be loaded into the store and then rendered
+//in the DOM, the next question will be loaded into the store
 function renderUserFeedback(){}
 
 //after the feedback is displayed the user clicks the next button and the next question is displayed
 //in the DOM
-function renderNextQuestion(){}
-
-//load the next question to the store based on the questionNumber
-function loadQuesitonToSTORE(){}
+function renderNextQuestion(){
+  //listen for a click event on the next button
+  //increment the COUNTER.questionNumber
+  //and:
+  loadQuesitonToSTORE();
+  renderQuestionAnswerText();
+  handleAnswerSubmitted();
+}
 
 //this will generate the html for the results page
 function generateQuizResults(){}
@@ -59,6 +81,14 @@ function renderQuizResults(){}
 //this will reload the page to its original state
 function restartQuiz(){}
 
+function creatQuiz(){
+  startQuizOnClick();
+  renderQuestionAnswerText();
+  handleAnswerSubmitted();
+  renderNextQuestion();
+}
+
+$(creatQuiz);
 
 
 
