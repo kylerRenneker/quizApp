@@ -7,14 +7,16 @@
   <body>
 
     <!-- Intro View -->
+  <div class="js-quiz-start">
     <h1>Country Quiz</h1>
     <p>Let's test your knowledge on country's capitals!</p>
     <button type="button" name="button">Start Quiz!</button>
+  </div>
 
 <!-- Question View -->
     <main id="js-quiz-state">
 
-      <div></div>
+      <section class="js-answer-template">
         <h2>What is the capital of the US?</h2>
         <form action="/answers" method="POST">
           <fieldset>
@@ -33,10 +35,11 @@
             <button type="submit" name="submit">Submit</button>
           </fieldset>
         </form>
+      </section>
     
 
     <!-- Feedback View - if right -->
-    
+    <section class="js-feedback">
       <h2>You are right!</h2>
       <button type='submit' name='next-question'>Next question!</button>
     
@@ -45,16 +48,18 @@
       <h2>You are wrong!</h2>
       <p>The correct answer is </p>
       <button type='submit' name='next-question'>Next question!</button>
-    
+    </section>
 
     <!-- Quiz Results -->
       <!-- If 7 out of 10 answers correct -->
-      <h2>Great job! You know your capitals!</h2>
-      <button type="submit" name="restart-quiz">Restart Quiz</button>
+      <section class="js-quiz-results">
+        <h2>Great job! You know your capitals!</h2>
+        <button type="submit" name="restart-quiz">Restart Quiz</button>
 
-      <h2>Oh no! You did not get enough answers correct.</h2>
-      <p>Study up on your capitals and try again!</p>
-      <button type="submit" name="restart-quiz"> Restart Quiz</button>
+        <h2>Oh no! You did not get enough answers correct.</h2>
+        <p>Study up on your capitals and try again!</p>
+        <button type="submit" name="restart-quiz"> Restart Quiz</button>
+      </section>
       
       </main>
 
