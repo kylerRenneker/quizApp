@@ -1,5 +1,4 @@
 // Here are our function stubs based on the function example provided at the bottom of this js file
-
 const QUESTIONS = [
   {
     question: 'What is the capital of the United States?',
@@ -45,20 +44,6 @@ const QUESTIONS = [
     correctAsnwer: 'Madrid',
   },
 ];
-const STORE = {
-    question: 'What is the capital of the United States?',
-    answers: [
-      'Washington D.C.',
-      'Sacramento',
-      'San Francisco',
-      'New York'
-    ],
-    correctAsnwer: 'Washington D.C.',
-    score: 0,
-    questionIndex: 0,
-    questionNumber: questionIndex+1,
-    view: 'questionView'
-};
 
 //The COUNTER object is used to store the current score and question number
 //they can be incremented within a function using COUNTER.score++ or COUNTER.questionNumber++
@@ -67,15 +52,37 @@ const STORE = {
 //   questionNumber: 0
 // }
 
+let questionIndex = 0;
+let score = 0;
+
+const STORE = {
+    question: QUESTIONS[questionIndex].question,
+    answers: QUESTIONS[questionIndex].answers,
+    correctAsnwer: QUESTIONS[questionIndex].correctAsnwer,
+    score: 0,
+    questionNumber: 1,
+    view: 'initialView'
+};
+console.log(STORE.answers);
+
+
+function render() {
+  renderQuestionAnswerText();
+ 
+}
+
+
+
+
 //This will listen for the click event on start button and will call the function needed 
 //to load the first question and remove the hardcoded .js-quiz-start div
 function startQuizOnClick(){
-  $('.js-quiz-start').on('click', 'button', function(event){
+  $('.js-quiz-start').on('click', '.startButton', function(){
     //once the user clicks the start button the the js-quiz-start div will be removed
     //and the following functions ran to populate the DOM with the first question:
-    $('.js-quiz-start').hide();
-    loadQuesitonToSTORE();
-    generateQuestion();
+    render();
+    //loadQuesitonToSTORE();
+    //generateQuestion();
   })
   
   //once the user clicks the start button the the js-quiz-start div will be removed
@@ -94,11 +101,42 @@ function loadQuesitonToSTORE(){
 //check to see if the questionNumber is less than or equal to the QUESTIONS.length
 //if it is generate the questino based on the questionNumber 
 //else render the quiz results page
-function generateQuestion(){}
+function generateQuestion(){
+  console.log(typeof answers);
+  return `<section class="js-answer-template">
+  <form>
+    <fieldset>
+      <legend>${STORE.question}</legend>
+  
+      <label class="answerOption">
+        <input type="radio" name="answer" value="${STORE.answers[0]}">
+        <span>${STORE.answers[0]}</span>
+      </label>
+      
+      <label class="answerOption">
+        <input type="radio" name="answer" value="${STORE.answers[1]}">
+        <span>${STORE.answers[1]}</span>
+      </label>
+      
+      <label class="answerOption">
+        <input type="radio" name="answer" value="${STORE.answers[2]}">
+        <span>${STORE.answers[2]}</span>
+      </label>
+
+      <label class="answerOption">
+        <input type="radio" name="answer" value="${STORE.answers[3]}">
+        <span>${STORE.answers[3]}</span>
+      </label>
+
+      <button type="submit" name="submit">Submit</button>
+    </fieldset>
+  </form>
+</section>`;
+}
 
 //render the question and answers and insert that HTML into the DOM
 function renderQuestionAnswerText(){
-  ('.questionAnswerForm').html(generateQuestion());
+  $('.questionAnswerForm').html(generateQuestion());
 }
 
 // on submission of answer check to see if the answer submitted is === to the answer in the STORE
@@ -110,7 +148,7 @@ function handleAnswerSubmitted(){
     // Update STORE and render appropriate section
 
     //get the value of the answer selected and assign that to a variable
-    //if the the value of the answer selected is equal to the STORE.correctAnswer
+    //if the the value of the answer selected is equal to the correctAnswer
         renderUserFeedback(generateUserFeedbackCorrect());
         //and increment the score and apply that to the container in the header that is keeping score
     //else
@@ -158,21 +196,13 @@ function restartQuiz(){
 
 function creatQuiz(){
   startQuizOnClick();
-  renderQuestionAnswerText();
+  //renderQuestionAnswerText();
   handleAnswerSubmitted();
   renderNextQuestion();
+  //render();
 }
 
 $(creatQuiz);
-
-
-
-
-
-
-
-
-
 
 
 
