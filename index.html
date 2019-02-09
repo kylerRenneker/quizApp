@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Country Quiz</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <!-- the header will store the current score and question number information and possibly an icon-->
     <header>
-      <span class="questionNumer">0</span>
+      <img src="images/worldwide.svg" class="icon" alt="">
+      <ul>
+        <li>Question: <span class="questionNumber">0</span><span>/10</span></li>
+        <li>Score: <span class="score">0</span></li>
+      </ul>
     </header>
     <main id="js-quiz-state" role="main">
     <!-- Intro View -->
@@ -22,7 +26,7 @@
     <div class="questionAnswerForm js-question-Answer-Form"></div>
 
       <!-- Question View -->
-      <section class="js-answer-template">
+      <!-- <section class="js-answer-template">
         <form>
           <fieldset>
             <legend>What is the Capital of the United States?</legend>
@@ -46,7 +50,7 @@
             <button type="submit" name="submit">Submit</button>
           </fieldset>
         </form>
-      </section>
+      </section> -->
     
 
     <!-- Feedback View - if right -->
@@ -75,12 +79,12 @@
     </main>
 
 
-    <!-- <script
+    <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">
     </script>
-    <script type="text/javscript" src="main.js"></script> -->
+    <script type="text/javscript" src="main.js"></script>
 
   </body>
 </html>

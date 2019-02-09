@@ -1,23 +1,87 @@
 // Here are our function stubs based on the function example provided at the bottom of this js file
 
-const QUESTIONS = [];
-const STORE = {};
+const QUESTIONS = [
+  {
+    question: 'What is the capital of the United States?',
+    answers: [
+      'Washington D.C.',
+      'Sacramento',
+      'San Francisco',
+      'New York'
+    ],
+    correctAsnwer: 'Washington D.C.',
+  },
+
+  {
+    question: 'What is the capital of Spain?',
+    answers: [
+      'Barcelona',
+      'Granada',
+      'Madrid',
+      'Seville'
+    ],
+    correctAsnwer: 'Madrid',
+  },
+
+  {
+    question: 'What is the capital of Spain?',
+    answers: [
+      'Barcelona',
+      'Granada',
+      'Madrid',
+      'Seville'
+    ],
+    correctAsnwer: 'Madrid',
+  },
+
+  {
+    question: 'What is the capital of Spain?',
+    answers: [
+      'Barcelona',
+      'Granada',
+      'Madrid',
+      'Seville'
+    ],
+    correctAsnwer: 'Madrid',
+  },
+];
+const STORE = {
+    question: 'What is the capital of the United States?',
+    answers: [
+      'Washington D.C.',
+      'Sacramento',
+      'San Francisco',
+      'New York'
+    ],
+    correctAsnwer: 'Washington D.C.',
+    score: 0,
+    questionIndex: 0,
+    questionNumber: questionIndex+1,
+    view: 'questionView'
+};
 
 //The COUNTER object is used to store the current score and question number
 //they can be incremented within a function using COUNTER.score++ or COUNTER.questionNumber++
-const COUNTER = {
-  score: 0,
-  questionNumber: 0
-}
+// const COUNTER = {
+//   score: 0,
+//   questionNumber: 0
+// }
 
 //This will listen for the click event on start button and will call the function needed 
 //to load the first question and remove the hardcoded .js-quiz-start div
 function startQuizOnClick(){
+  $('.js-quiz-start').on('click', 'button', function(event){
+    //once the user clicks the start button the the js-quiz-start div will be removed
+    //and the following functions ran to populate the DOM with the first question:
+    $('.js-quiz-start').hide();
+    loadQuesitonToSTORE();
+    generateQuestion();
+  })
   
   //once the user clicks the start button the the js-quiz-start div will be removed
   //and the following functions ran to populate the DOM with the first question:
-  loadQuesitonToSTORE();
-  generateQuestion();
+  // loadQuesitonToSTORE();
+  // generateQuestion();
 }
 
 //load the next question to the store based on the questionNumber
