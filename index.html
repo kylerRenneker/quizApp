@@ -9,7 +9,7 @@
   <body>
     <!-- the header will store the current score and question number information and possibly an icon-->
     <header>
-
+      <span class="questionNumer">0</span>
     </header>
     <main id="js-quiz-state" role="main">
     <!-- Intro View -->
@@ -22,13 +22,13 @@
     <div class="questionAnswerForm js-question-Answer-Form"></div>
 
       <!-- Question View -->
-      <!-- <section class="js-answer-template">
-        <h2>What is the capital of the US?</h2>
+      <section class="js-answer-template">
         <form>
           <fieldset>
-
+            <legend>What is the Capital of the United States?</legend>
+            
             <label class="answerOption">
-              <input type="radio" name="answer" value="sacremento" id="answer-1">
+              <input type="radio" name="answer" value="sacremento">
               <span>Sacremento</span>
             </label>
             
@@ -46,7 +46,7 @@
             <button type="submit" name="submit">Submit</button>
           </fieldset>
         </form>
-      </section> -->
+      </section>
     
 
     <!-- Feedback View - if right -->

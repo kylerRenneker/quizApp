@@ -13,6 +13,7 @@ const COUNTER = {
 //This will listen for the click event on start button and will call the function needed 
 //to load the first question and remove the hardcoded .js-quiz-start div
 function startQuizOnClick(){
+  
   //once the user clicks the start button the the js-quiz-start div will be removed
   //and the following functions ran to populate the DOM with the first question:
   loadQuesitonToSTORE();
@@ -26,13 +27,15 @@ function loadQuesitonToSTORE(){
 }
 
 //form the the HMTL template for a given question and asnwers in the STORE object
-//check to see if the questionNumber is less than or equal to the STORE.length
+//check to see if the questionNumber is less than or equal to the QUESTIONS.length
 //if it is generate the questino based on the questionNumber 
 //else render the quiz results page
 function generateQuestion(){}
 
 //render the question and answers and insert that HTML into the DOM
-function renderQuestionAnswerText(){}
+function renderQuestionAnswerText(){
+  ('.questionAnswerForm').html(generateQuestion());
+}
 
 // on submission of answer check to see if the answer submitted is === to the answer in the STORE
 // object and if it is then run the function to display answer correct & incriment the score 
@@ -66,9 +69,15 @@ function renderNextQuestion(){
   //listen for a click event on the next button
   //increment the COUNTER.questionNumber
   //and:
-  loadQuesitonToSTORE();
-  renderQuestionAnswerText();
-  handleAnswerSubmitted();
+  if(COUNTER.questionNumber < QUESTIONS.length){
+    loadQuesitonToSTORE();
+    renderQuestionAnswerText();
+    handleAnswerSubmitted();
+  }
+  else{
+    renderQuizResults();
+
+  }
 }
 
 //this will generate the html for the results page
@@ -79,7 +88,9 @@ function generateQuizResults(){}
 function renderQuizResults(){}
 
 //this will reload the page to its original state
-function restartQuiz(){}
+function restartQuiz(){
+
+}
 
 function creatQuiz(){
   startQuizOnClick();
