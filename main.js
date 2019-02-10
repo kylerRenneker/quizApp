@@ -159,22 +159,22 @@ function generateQuestion(){
       <legend>${STORE.question}</legend>
   
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[0]}">
+        <input type="radio" name="answer" value="${STORE.answers[0]}" required>
         <span>${STORE.answers[0]}</span>
       </label>
       
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[1]}">
+        <input type="radio" name="answer" value="${STORE.answers[1]}" required>
         <span>${STORE.answers[1]}</span>
       </label>
       
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[2]}">
+        <input type="radio" name="answer" value="${STORE.answers[2]}" required>
         <span>${STORE.answers[2]}</span>
       </label>
 
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[3]}">
+        <input type="radio" name="answer" value="${STORE.answers[3]}" required>
         <span>${STORE.answers[3]}</span>
       </label>
 
