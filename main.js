@@ -8,7 +8,7 @@ const QUESTIONS = [
       'San Francisco',
       'New York'
     ],
-    correctAsnwer: 'Washington D.C.',
+    correctAnswer: 'Washington D.C.',
   },
 
   {
@@ -19,7 +19,7 @@ const QUESTIONS = [
       'Madrid',
       'Seville'
     ],
-    correctAsnwer: 'Madrid',
+    correctAnswer: 'Madrid',
   }
 
 ];
@@ -37,12 +37,10 @@ const INDEX = {
 const STORE = {
     question: QUESTIONS[INDEX.questionIndex].question,
     answers: QUESTIONS[INDEX.questionIndex].answers,
-    correctAsnwer: QUESTIONS[INDEX.questionIndex].correctAsnwer,
+    correctAnswer: QUESTIONS[INDEX.questionIndex].correctAnswer,
     score: 0,
     questionNumber: 0,
-    // view: 'initialView'
 };
-// console.log(STORE.answers);
 
 function generateIntroView(){
   return `<div class="js-quiz-start">
@@ -52,17 +50,27 @@ function generateIntroView(){
 </div>`
 }
 
-function render() {
-  if(STORE.questionNumber === 0){
-    $('.questionAnswerForm').html(generateIntroView());
-    STORE.questionNumber++;
-  }
-  else if(STORE.questionNumber < QUESTIONS.length){
-    renderQuestionAnswerText();
-    handleAnswerSubmitted();
-  }
-
+function renderIntroView(){
+  $('.questionAnswerForm').html(generateIntroView());
 }
+
+// function render() {
+//   let question = QUESTIONS[INDEX.questionIndex].question;
+  
+//   if(STORE.questionNumber === 0){
+//     $('.questionAnswerForm').html(generateIntroView());
+//     startQuizOnClick();
+//     STORE.questionNumber++;
+//   }
+//   else if(STORE.questionNumber < QUESTIONS.length+1){
+//     renderQuestionAnswerText();
+//     handleAnswerSubmitted();
+//     renderNextQuestion();
+//   }
+//   console.log(question);
+//   console.log(QUESTIONS[INDEX.questionIndex].question);
+//   console.log(question);
+// }
 
 
 
@@ -71,17 +79,8 @@ function render() {
 //to load the first question and remove the hardcoded .js-quiz-start div
 function startQuizOnClick(){
   $('.js-quiz-start').on('click', '.startButton', function(){
-    //once the user clicks the start button the the js-quiz-start div will be removed
-    //and the following functions ran to populate the DOM with the first question:
-    render();
-    //loadQuesitonToSTORE();
-    //generateQuestion();
+    renderQuestionAnswerText();
   })
-  
-  //once the user clicks the start button the the js-quiz-start div will be removed
-  //and the following functions ran to populate the DOM with the first question:
-  // loadQuesitonToSTORE();
-  // generateQuestion();
 }
 
 //load the next question to the store based on the questionNumber
@@ -94,30 +93,30 @@ function loadQuesitonToSTORE(){
 //check to see if the questionNumber is less than or equal to the QUESTIONS.length
 //if it is generate the questino based on the questionNumber 
 //else render the quiz results page
-function generateQuestion(obj){
+function generateQuestion(){
   return `<section class="js-answer-template">
   <form>
     <fieldset>
-      <legend>${STORE.question}</legend>
+      <legend>${QUESTIONS[INDEX.questionIndex].question}</legend>
   
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[0]}">
-        <span>${STORE.answers[0]}</span>
+        <input type="radio" name="answer" value="${QUESTIONS[INDEX.questionIndex].answers[0]}">
+        <span>${QUESTIONS[INDEX.questionIndex].answers[0]}</span>
       </label>
       
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[1]}">
-        <span>${STORE.answers[1]}</span>
+        <input type="radio" name="answer" value="${QUESTIONS[INDEX.questionIndex].answers[1]}">
+        <span>${QUESTIONS[INDEX.questionIndex].answers[1]}</span>
       </label>
       
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[2]}">
-        <span>${STORE.answers[2]}</span>
+        <input type="radio" name="answer" value="${QUESTIONS[INDEX.questionIndex].answers[2]}">
+        <span>${QUESTIONS[INDEX.questionIndex].answers[2]}</span>
       </label>
 
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[3]}">
-        <span>${STORE.answers[3]}</span>
+        <input type="radio" name="answer" value="${QUESTIONS[INDEX.questionIndex].answers[3]}">
+        <span>${QUESTIONS[INDEX.questionIndex].answers[3]}</span>
       </label>
 
       <button type="submit" name="submit">Submit</button>
@@ -128,7 +127,8 @@ function generateQuestion(obj){
 
 //render the question and answers and insert that HTML into the DOM
 function renderQuestionAnswerText(){
-  $('.questionAnswerForm').html(generateQuestion(STORE));
+  $('.questionAnswerForm').html(generateQuestion());
+  handleAnswerSubmitted();
 }
 
 // on submission of answer check to see if the answer submitted is === to the answer in the STORE
@@ -143,19 +143,17 @@ function handleAnswerSubmitted(){
       event.preventDefault();
       let selected = $('input:checked');
       let answer = selected.val();
-      if(answer === STORE.correctAsnwer){
+      if(answer === QUESTIONS[INDEX.questionIndex].correctAnswer){
         $('.questionAnswerForm').html(generateUserFeedbackCorrect());
-        score++;
+        STORE.score++;
       }
       else{
         $('.questionAnswerForm').html(generateUserFeedbackIncorrect());
       }
-      STORE.questionNumber++;
-      console.log(STORE.question);
+      $('.score').text(STORE.score);
+      console.log(STORE.correctAnswer);
+      renderNextQuestion();
     })
-    
-
-
     //get the value of the answer selected and assign that to a variable
     //if the the value of the answer selected is equal to the correctAnswer
         // renderUserFeedback(generateUserFeedbackCorrect());
@@ -173,14 +171,16 @@ function generateUserFeedbackCorrect(){
 //form and return an html template for if the user gets the answer incorrect
 function generateUserFeedbackIncorrect(){
   return `<section class='js-feedback-incorrect'> <h2>You are wrong!</h2>
-      <p>The correct answer is ${STORE.correctAsnwer}</p>
+      <p>The correct answer is ${QUESTIONS[INDEX.questionIndex].correctAnswer}</p>
       <button class='js-next-btn' type='submit' name='next-question'>Next question!</button>
     </section>`;
 }
 
 //depending on the answer submitted the correct or incorrect feedback html will be loaded
 //in the DOM, the next question will be loaded into the store
-function renderUserFeedback(){}
+// function renderUserFeedback(){
+  
+// }
 
 //after the feedback is displayed the user clicks the next button and the next question is displayed
 //in the DOM
@@ -191,12 +191,11 @@ function renderNextQuestion(){
   $('.questionAnswerForm').on('click', '.js-next-btn', function(event){
     
       INDEX.questionIndex++;
+      STORE.questionNumber++;
       console.log(INDEX.questionIndex);
-      console.log(QUESTIONS[INDEX.questionIndex].question);
-      console.log(generateQuestion());
-      // loadQuesitonToSTORE();
+      console.log(STORE.questionNumber);
       // renderQuestionAnswerText();
-      render();
+      renderQuestionAnswerText();
   })
   
 }
@@ -225,10 +224,11 @@ function restartQuiz(){
 }
 
 function creatQuiz(){
-  render();
+  // render();
+  renderIntroView();
   startQuizOnClick();
   // handleAnswerSubmitted();
-  renderNextQuestion();
+
 }
 
 $(creatQuiz);
