@@ -15,3 +15,7 @@ img.icon {
 header img, header li {
     display: inline-block;
 }
+
+.questionAnswerForm{
+    text-align: center;
+}
