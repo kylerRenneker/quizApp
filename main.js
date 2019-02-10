@@ -1,6 +1,6 @@
 // Here are our function stubs based on the function example provided at the bottom of this js file
 const QUESTIONS = [
-  {
+  {//1
     question: 'What is the capital of the United States?',
     answers: [
       'Washington D.C.',
@@ -10,7 +10,7 @@ const QUESTIONS = [
     ],
     correctAnswer: 'Washington D.C.',
   },
-
+//2
   {
     question: 'What is the capital of Spain?',
     answers: [
@@ -21,7 +21,7 @@ const QUESTIONS = [
     ],
     correctAnswer: 'Madrid',
   },
-
+//3
   {
     question: 'What is the capital of Argentina?',
     answers: [
@@ -32,7 +32,7 @@ const QUESTIONS = [
     ],
     correctAnswer: 'Buenes Aires',
   },
-
+//4
   {
     question: 'What is the capital of Australia?',
     answers: [
@@ -42,8 +42,73 @@ const QUESTIONS = [
       'Canberra'
     ],
     correctAnswer: 'Canberra',
+  },
+//5
+  {
+    question: 'What is the capital of China?',
+    answers: [
+      'Shanghai',
+      'Beijing',
+      'Chongqing',
+      'Xi\'an'
+    ],
+    correctAnswer: 'Beijing',
+  },
+//6
+  {
+    question: 'What is the capital of UK?',
+    answers: [
+      'London',
+      'Edinburgh',
+      'Leeds',
+      'Liverpool'
+    ],
+    correctAnswer: 'London',
+  },
+//7
+  {
+    question: 'What is the capital of Iran?',
+    answers: [
+      'Mashhad',
+      'Tabriz',
+      'Tehran',
+      'Isfahan'
+    ],
+    correctAnswer: 'Tehran',
+  },
+//8
+  {
+    question: 'What is the capital of Brazil?',
+    answers: [
+      'Rio de Janeiro',
+      'San Paulo',
+      'Curitiba',
+      'Brasília'
+    ],
+    correctAnswer: 'Brasília',
+  },
+//9
+  {
+    question: 'What is the capital of Rwanda?',
+    answers: [
+      'Nyamata',
+      'Ruhengeri',
+      'Butare',
+      'Kigali'
+    ],
+    correctAnswer: 'Kigali',
+  },
+//10
+  {
+    question: 'What is the capital of Japan?',
+    answers: [
+      'Osaka',
+      'Kyoto',
+      'Tokyo',
+      'Sapporo'
+    ],
+    correctAnswer: 'Tokyo',
   }
-
 ];
 
 const INDEX = {
@@ -185,7 +250,12 @@ function generateQuizResultsFailed(){
 }
 
 function renderQuizResults(){
-  $('.js-question-Answer-Form').html(generateQuizResultsPass());
+  if (STORE.score/QUESTIONS.length >= 0.7) {
+    $('.js-question-Answer-Form').html(generateQuizResultsPass());
+  }
+  else {
+    $('.js-question-Answer-Form').html(generateQuizResultsFailed());
+  }
   console.log(STORE.score/QUESTIONS.length);
   restartQuiz();
 }
