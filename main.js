@@ -159,63 +159,23 @@ function generateQuestion(){
       <legend>${STORE.currentQuestion.question}</legend>
   
       <label class="answerOption">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        <input type="radio" name="answer" value="${STORE.answers[0]}" required>
-        <span>${STORE.answers[0]}</span>
-      </label>
-      
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[1]}" required>
-        <span>${STORE.answers[1]}</span>
-      </label>
-      
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[2]}" required>
-        <span>${STORE.answers[2]}</span>
-      </label>
-
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.answers[3]}" required>
-        <span>${STORE.answers[3]}</span>
-=======
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[0]}">
+        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[0]}" required>
         <span>${STORE.currentQuestion.answers[0]}</span>
       </label>
       
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[1]}">
+        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[1]}" required>
         <span>${STORE.currentQuestion.answers[1]}</span>
       </label>
       
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[2]}">
+        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[2]}" required>
         <span>${STORE.currentQuestion.answers[2]}</span>
       </label>
 
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[3]}">
+        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[3]}" required>
         <span>${STORE.currentQuestion.answers[3]}</span>
->>>>>>> Stashed changes
-=======
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[0]}">
-        <span>${STORE.currentQuestion.answers[0]}</span>
-      </label>
-      
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[1]}">
-        <span>${STORE.currentQuestion.answers[1]}</span>
-      </label>
-      
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[2]}">
-        <span>${STORE.currentQuestion.answers[2]}</span>
-      </label>
-
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE.currentQuestion.answers[3]}">
-        <span>${STORE.currentQuestion.answers[3]}</span>
->>>>>>> Stashed changes
       </label>
 
       <button type="submit" name="submit">Submit</button>
@@ -264,20 +224,8 @@ function generateUserFeedbackCorrect(){
 
 //added icon
 function generateUserFeedbackIncorrect(){
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  return `
-    <section class='js-feedback-incorrect'> <h2>You are wrong!</h2>
-      <img src="images/incorrect2.svg" class="icon" alt="incorrect">
-      <p>The correct answer is ${STORE.correctAnswer}</p>
-=======
   return `<section class='js-feedback-incorrect'> <h2>You are wrong!</h2>
       <p>The correct answer is ${STORE.currentQuestion.correctAnswer}</p>
->>>>>>> Stashed changes
-=======
-  return `<section class='js-feedback-incorrect'> <h2>You are wrong!</h2>
-      <p>The correct answer is ${STORE.currentQuestion.correctAnswer}</p>
->>>>>>> Stashed changes
       <button class='js-next-btn' type='submit' name='next-question'>Next question!</button>
     </section>`;
 }
