@@ -1,6 +1,10 @@
 html, body *{
     box-sizing: border-box;
 }
+/* added background image */
+html {
+    background-image: url(images/worldmap-hand.jpg)
+}
 
 header {
     display: flex;

@@ -149,9 +149,11 @@ function updateSTORE(){
     STORE.correctAnswer = QUESTIONS[INDEX.questionIndex].correctAnswer;
   }
 }
-
+//added icon
 function generateQuestion(){
-  return `<section class="js-answer-template">
+  return `
+  <section class="js-answer-template">
+  <img src="images/question1.svg" class="icon" alt="icon of the earth">
   <form>
     <fieldset>
       <legend>${STORE.question}</legend>
@@ -211,14 +213,20 @@ function handleAnswerSubmitted(){
     })
 }
 
+//added icon
 function generateUserFeedbackCorrect(){
-  return `<section class="js-feedback-correct">
-  <h2>You are right!</h2>
+  return `
+  <section class="js-feedback-correct">
+    <img src="images/correct1.svg" class="icon" alt="correct">
+    <h2>You are right!</h2>
   <button class='js-next-btn' type='submit' name='next-question'>Next question!</button> </section>`;
 }
 
+//added icon
 function generateUserFeedbackIncorrect(){
-  return `<section class='js-feedback-incorrect'> <h2>You are wrong!</h2>
+  return `
+    <section class='js-feedback-incorrect'> <h2>You are wrong!</h2>
+      <img src="images/incorrect2.svg" class="icon" alt="incorrect">
       <p>The correct answer is ${STORE.correctAnswer}</p>
       <button class='js-next-btn' type='submit' name='next-question'>Next question!</button>
     </section>`;
@@ -236,16 +244,24 @@ function renderNextQuestion(){
   
 }
 
+//added icon
 function generateQuizResultsPass(){
-  return `<section class="js-quiz-results">
-        <h2>Great job! You know your capitals!</h2>
-        <button class='js-restart-btn 'type="submit" name="restart-quiz">Restart Quiz</button></section>`;
+  return `
+  <section class="js-quiz-results">
+    <img src="images/congrats1.svg" class="icon" alt="congrats">
+    <h2>Great job! You know your capitals!</h2>
+    <button class='js-restart-btn 'type="submit" name="restart-quiz">Restart Quiz</button>
+  </section>`;
 }
 
+//added icon
 function generateQuizResultsFailed(){
-  return `<section> <h2>Oh no! You did not get enough answers correct.</h2>
-  <p>Study up on your capitals and try again!</p>
-  <button class='js-restart-btn 'type="submit" name="restart-quiz"> Restart Quiz</button>
+  return `
+  <section>
+    <img src="images/cry3.svg" class="icon" alt="failed teary face">
+    <h2>Oh no! You did not get enough answers correct.</h2>
+    <p>Study up on your capitals and try again!</p>
+    <button class='js-restart-btn 'type="submit" name="restart-quiz"> Restart Quiz</button>
   </section>`;
 }
 
