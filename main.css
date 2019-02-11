@@ -99,3 +99,15 @@ button.js-next-btn {
 section.js-feedback-correct {
     margin-top: 20px;
 }
+
+section.js-quiz-results {
+    margin-top: 20px;
+}
+
+button.js-restart-btn {
+    background-color: #7A8FAE;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 25px;
+    padding: 20px;
+}
