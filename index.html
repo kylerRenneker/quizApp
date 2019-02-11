@@ -5,25 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Country Quiz</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="normalize.css">
   </head>
   <body>
     <!-- the header will store the current score and question number information and possibly an icon-->
-    <header>
-      <img src="images/worldicon1.svg" class="icon" alt="icon of the earth">
-      <!-- <img src="images/worldicon2.svg" class="icon" alt="icon of the earth">
-      <img src="images/correct1.svg" class="icon" alt="correct">
-      <img src="images/correct2.svg" class="icon" alt="correct">
-      <img src="images/incorrect1.svg" class="icon" alt="incorrect">
-      <img src="images/incorrect2.svg" class="icon" alt="incorrect">
-      <img src="images/congrats1.svg" class="icon" alt="congrats">
-      <img src="images/congrats2.svg" class="icon" alt="congrats">
-      <img src="images/happy1.svg" class="icon" alt="congrats! A jumping happy person">
-      <img src="images/happy2.svg" class="icon" alt="Congrats! A happy face">
-      <img src="images/cry1.svg" class="icon" alt="failed teary face">
-      <img src="images/cry2.svg" class="icon" alt="failed teary face">
-      <img src="images/cry3.svg" class="icon" alt="failed teary face"> -->
-
-      <ul>
+    <header class="row">
+      <img src="images/worldicon1.svg" class="icon col-4" alt="icon of the earth">
+      <ul class="col-6">
         <li>Question: <span class="questionNumber">0</span><span>/10</span></li>
         <li>Score: <span class="score">0</span></li>
       </ul>
