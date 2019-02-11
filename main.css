@@ -101,12 +101,19 @@ section.js-feedback-correct {
     margin-top: 20px;
 }
 
+
 .questionText:hover {
     font-style: italic;
 }
 
+section.js-quiz-results {
+    margin-top: 20px;
+}
+
 button.js-restart-btn {
-    background: rgba(251, 251, 251, 0.59);
-    padding: 20px;
+    background-color:rgba(251, 251, 251, 0.59);
+    margin-bottom: 40px;
+    border: none;
     border-radius: 25px;
+    padding: 20px;
 }
