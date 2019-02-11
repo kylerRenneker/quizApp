@@ -160,22 +160,22 @@ function generateQuestion(){
   
       <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[0]}" required>
-        <span>${STORE.currentQuestion.answers[0]}</span>
+        <span class= "questionText">${STORE.currentQuestion.answers[0]}</span>
       </label>
       
       <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[1]}" required>
-        <span>${STORE.currentQuestion.answers[1]}</span>
+        <span class= "questionText">${STORE.currentQuestion.answers[1]}</span>
       </label>
       
       <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[2]}" required>
-        <span>${STORE.currentQuestion.answers[2]}</span>
+        <span class= "questionText">${STORE.currentQuestion.answers[2]}</span>
       </label>
 
       <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[3]}" required>
-        <span>${STORE.currentQuestion.answers[3]}</span>
+        <span class= "questionText">${STORE.currentQuestion.answers[3]}</span>
       </label>
 
       <button class="questionSubmit" type="submit" name="submit">Submit</button>
@@ -225,7 +225,7 @@ function generateUserFeedbackCorrect(){
 //added icon
 function generateUserFeedbackIncorrect(){
   return `<section class='js-feedback-Incorrect'> <h2>You are wrong!</h2>
-      <p>The correct answer is ${STORE.currentQuestion.correctAnswer}</p>
+      <p>The correct answer is ${STORE.currentQuestion.correctAnswer}.</p>
       <button class='js-next-btn' type='submit' name='next-question'>Next question!</button>
     </section>`;
 }

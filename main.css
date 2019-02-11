@@ -36,11 +36,11 @@ fieldset {
 }
 
 button.startButton {
-    background-color: cadetblue;
+    background-color: rgba(251, 251, 251, 0.59);
     border: none;
     /* border: 1px black solid; */
     border-radius: 33px;
-    padding: 10px;
+    padding: 20px;
     /* width: 120px; */
 }
 
@@ -56,7 +56,7 @@ img.col-12.questionIcon {
 
 main#js-quiz-state {
     font-size: 2.5rem;
-    background-color: white;
+    background: rgba(157, 179, 199, 0.5);
 }
 
 img.col-12.questionIcon {
@@ -66,11 +66,12 @@ img.col-12.questionIcon {
 button.questionSubmit {
     /* text-align: center; */
     width: 100%;
-    text-align: left;
+    text-align: center;
     padding: 20px;
     /* margin: 10px; */
     background-color: aliceblue;
     margin-top: 10px;
+    background: rgba(251, 251, 251, 0.59);
 }
 
 img.icon.col-12 {
@@ -89,7 +90,7 @@ section.js-quiz-results {
 }
 
 button.js-next-btn {
-    background-color: lightblue;
+    background-color: rgba(251, 251, 251, 0.59);
     margin-bottom: 40px;
     border: none;
     border-radius: 25px;
@@ -98,4 +99,14 @@ button.js-next-btn {
 
 section.js-feedback-correct {
     margin-top: 20px;
+}
+
+.questionText:hover {
+    font-style: italic;
+}
+
+button.js-restart-btn {
+    background: rgba(251, 251, 251, 0.59);
+    padding: 20px;
+    border-radius: 25px;
 }
