@@ -178,7 +178,9 @@ function generateQuestion(){
         <span class= "questionText">${STORE.currentQuestion.answers[3]}</span>
       </label>
 
-      <button class="questionSubmit" type="submit" name="submit">Submit</button>
+      <div class="buttonDiv">
+        <button class="questionSubmit" type="submit" name="submit">Submit</button>
+      </div>
     </fieldset>
   </form>
 </section>`;

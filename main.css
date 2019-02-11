@@ -43,13 +43,16 @@ main#js-quiz-state {
     min-width: 100%;
 }
 
-button.startButton {
-    background-color: rgba(251, 251, 251, 0.59);
+button.startButton, 
+button.questionSubmit,
+button.js-next-btn {
+    background-color: rgb(94, 161, 200);
     border: none;
     /* border: 1px black solid; */
     border-radius: 33px;
-    padding: 20px;
-    /* width: 120px; */
+    padding: 15px;
+    width: 200px;
+    box-shadow: 5px 5px 10px #b1b1b1;
 }
 
 .quizStart{
@@ -64,23 +67,21 @@ img.col-12.questionIcon {
 
 main#js-quiz-state {
     font-size: 2.5rem;
-    background: rgba(157, 179, 199, 0.5);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 img.col-12.questionIcon {
     height: 50px;
 }
 
-button.questionSubmit {
-    /* text-align: center; */
+/* button.questionSubmit {
     width: 100%;
     text-align: center;
     padding: 20px;
-    /* margin: 10px; */
     background-color: aliceblue;
     margin-top: 10px;
     background: rgba(251, 251, 251, 0.59);
-}
+} */
 
 img.icon.col-12 {
     margin-top: 20px;
@@ -97,13 +98,13 @@ section.js-quiz-results {
     margin-bottom: 20px;
 }
 
-button.js-next-btn {
+/* button.js-next-btn {
     background-color: rgba(251, 251, 251, 0.59);
     margin-bottom: 40px;
     border: none;
     border-radius: 25px;
     padding: 20px;
-}
+} */
 
 section.js-feedback-correct {
     margin-top: 20px;
@@ -124,4 +125,13 @@ button.js-restart-btn {
     border: none;
     border-radius: 25px;
     padding: 20px;
+}
+
+.buttonDiv{
+    text-align: center
+}
+
+button.questionSubmit {
+    margin-top: 25px;
+    width: 100%;
 }
