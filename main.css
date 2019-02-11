@@ -31,6 +31,10 @@ ul.col-6 {
     text-align: center;
 }
 
+fieldset {
+    border: 0;
+}
+
 button.startButton {
     background-color: cadetblue;
     border: none;
@@ -40,6 +44,52 @@ button.startButton {
     width: 120px;
 }
 
-.questionAnswerForm {
+.quizStart{
     text-align: center;
+}
+
+img.col-12.questionIcon {
+    height: 50px;
+}
+
+/* You might want to change these settings */
+
+main#js-quiz-state {
+    font-size: 2.5rem;
+    background-color: white;
+}
+
+img.col-12.questionIcon {
+    height: 50px;
+}
+
+button.questionSubmit {
+    /* text-align: center; */
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    /* margin: 10px; */
+    background-color: aliceblue;
+    margin-top: 10px;
+}
+
+img.icon.col-12 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section.js-feedback-correct, section.js-feedback-Incorrect {
+    text-align: center;
+}
+
+button.js-next-btn {
+    background-color: lightblue;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+section.js-feedback-correct {
+    margin-top: 20px;
 }

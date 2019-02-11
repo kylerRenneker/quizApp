@@ -124,7 +124,7 @@ const STORE = {
 };
 
 function generateIntroView(){
-  return `<div class="js-quiz-start">
+  return `<div class="quizStart js-quiz-start">
   <h1>Country Quiz</h1>
   <p>Let's test your knowledge on country's capitals!</p>
   <button type="button" name="button" class="startButton">Start Quiz!</button>
@@ -153,32 +153,32 @@ function updateSTORE(){
 function generateQuestion(){
   return `
   <section class="js-answer-template">
-  <img src="images/question1.svg" class="icon" alt="icon of the earth">
+  <img src="images/question1.svg" class="icon col-12" alt="icon of the earth">
   <form>
     <fieldset>
       <legend>${STORE.currentQuestion.question}</legend>
   
-      <label class="answerOption">
+      <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[0]}" required>
         <span>${STORE.currentQuestion.answers[0]}</span>
       </label>
       
-      <label class="answerOption">
+      <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[1]}" required>
         <span>${STORE.currentQuestion.answers[1]}</span>
       </label>
       
-      <label class="answerOption">
+      <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[2]}" required>
         <span>${STORE.currentQuestion.answers[2]}</span>
       </label>
 
-      <label class="answerOption">
+      <label class="answerOption col-6">
         <input type="radio" name="answer" value="${STORE.currentQuestion.answers[3]}" required>
         <span>${STORE.currentQuestion.answers[3]}</span>
       </label>
 
-      <button type="submit" name="submit">Submit</button>
+      <button class="questionSubmit" type="submit" name="submit">Submit</button>
     </fieldset>
   </form>
 </section>`;
@@ -224,7 +224,7 @@ function generateUserFeedbackCorrect(){
 
 //added icon
 function generateUserFeedbackIncorrect(){
-  return `<section class='js-feedback-incorrect'> <h2>You are wrong!</h2>
+  return `<section class='js-feedback-Incorrect'> <h2>You are wrong!</h2>
       <p>The correct answer is ${STORE.currentQuestion.correctAnswer}</p>
       <button class='js-next-btn' type='submit' name='next-question'>Next question!</button>
     </section>`;
@@ -248,18 +248,18 @@ function generateQuizResultsPass(){
   <section class="js-quiz-results">
     <img src="images/congrats1.svg" class="icon" alt="congrats">
     <h2>Great job! You know your capitals!</h2>
-    <button class='js-restart-btn 'type="submit" name="restart-quiz">Restart Quiz</button>
+    <button class='js-restart-btn' type="submit" name="restart-quiz">Restart Quiz</button>
   </section>`;
 }
 
 //added icon
 function generateQuizResultsFailed(){
   return `
-  <section>
+  <section class="js-quiz-results">
     <img src="images/cry3.svg" class="icon" alt="failed teary face">
     <h2>Oh no! You did not get enough answers correct.</h2>
     <p>Study up on your capitals and try again!</p>
-    <button class='js-restart-btn 'type="submit" name="restart-quiz"> Restart Quiz</button>
+    <button class='js-restart-btn' type="submit" name="restart-quiz">Restart Quiz</button>
   </section>`;
 }
 
