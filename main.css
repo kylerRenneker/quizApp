@@ -41,7 +41,7 @@ button.startButton {
     /* border: 1px black solid; */
     border-radius: 33px;
     padding: 10px;
-    width: 120px;
+    /* width: 120px; */
 }
 
 .quizStart{
@@ -78,8 +78,14 @@ img.icon.col-12 {
     margin-bottom: 20px;
 }
 
-section.js-feedback-correct, section.js-feedback-Incorrect {
+section.js-feedback-correct, 
+section.js-feedback-Incorrect,
+section.js-quiz-results {
     text-align: center;
+}
+
+.questionAnswerForm.js-question-Answer-Form {
+    margin-bottom: 20px;
 }
 
 button.js-next-btn {
