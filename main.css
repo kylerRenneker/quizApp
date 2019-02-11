@@ -35,6 +35,14 @@ fieldset {
     border: 0;
 }
 
+main#js-quiz-state {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+}
+
 button.startButton {
     background-color: cadetblue;
     border: none;
