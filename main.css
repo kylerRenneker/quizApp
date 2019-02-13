@@ -61,7 +61,6 @@ label span {
 [type="checkbox"], [type="radio"] {
     box-sizing: border-box;
     padding: 0;
-    /* margin-bottom: 5px; */
     position: relative;
     bottom: 5px;
 }
@@ -89,6 +88,9 @@ button.restartBtn {
 
 .quizStart {
     text-align: center;
+    margin-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .quizStart h1 {
@@ -110,7 +112,7 @@ img.icon.col-12 {
 
 .mainIcon {
     height: 100px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -128,8 +130,6 @@ section.js-quiz-results {
     margin-bottom: 20px;
     font-size: 2rem;
     background: rgba(255, 255, 255, 0.8);
-    padding-top: 20px;
-    padding-bottom: 20px;
     max-width: 800px;
     margin: 25px auto;
 }
@@ -162,7 +162,9 @@ button.questionSubmit {
     margin-top: 25px;
 }
 
-/* test radio button and label styles */
+button.js-next-btn {
+    margin-bottom: 40px;
+}
 
 label [type='radio'] {
     display: none;

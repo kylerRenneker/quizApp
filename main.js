@@ -230,7 +230,10 @@ function generateUserFeedbackCorrect(){
 
 //added icon
 function generateUserFeedbackIncorrect(){
-  return `<section class='feedback js-feedback-Incorrect'> <h2>You are wrong!</h2>
+  return `
+    <section class='feedback js-feedback-Incorrect'>
+      <img src='images/wrong.svg' class='mainIcon' alt='incorrect'>
+      <h2 class='responseH2'>You are wrong!</h2>
       <p>The correct answer is ${STORE.currentQuestion.correctAnswer}.</p>
       <button class='js-next-btn' type='submit' name='next-question'>Next question!</button>
     </section>`;
