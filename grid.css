@@ -92,4 +92,8 @@
     .answerOption span:hover{
         background: #ffff0059;
     }
+
+    .feedback, .results {
+        margin-top: 50px;
+    }
   }
