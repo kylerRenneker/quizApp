@@ -254,7 +254,7 @@ function renderNextQuestion(){
 //added icon
 function generateQuizResultsPass(){
   return `
-  <section class="js-quiz-results">
+  <section class="results js-quiz-results">
     <img src="images/congrats1.svg" class="mainIcon" alt="congrats">
     <h2>Great job! You know your capitals!</h2>
     <button class='restartBtn js-restart-btn' type="submit" name="restart-quiz">Restart Quiz</button>
@@ -264,7 +264,7 @@ function generateQuizResultsPass(){
 //added icon
 function generateQuizResultsFailed(){
   return `
-  <section class="js-quiz-results">
+  <section class="results js-quiz-results">
     <img src="images/cry3.svg" class="mainIcon" alt="failed teary face">
     <h2>Oh no! You did not get enough answers correct.</h2>
     <p>Study up on your capitals and try again!</p>
