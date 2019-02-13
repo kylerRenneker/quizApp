@@ -222,7 +222,7 @@ function handleAnswerSubmitted(){
 //added icon
 function generateUserFeedbackCorrect(){
   return `
-  <section class="js-feedback-correct">
+  <section class="feedback js-feedback-correct">
     <img src="images/correct1.svg" class="mainIcon" alt="correct">
     <h2 class='responseH2'>You are right!</h2>
   <button class='js-next-btn' type='submit' name='next-question'>Next question!</button> </section>`;
@@ -230,7 +230,7 @@ function generateUserFeedbackCorrect(){
 
 //added icon
 function generateUserFeedbackIncorrect(){
-  return `<section class='js-feedback-Incorrect'> <h2>You are wrong!</h2>
+  return `<section class='feedback js-feedback-Incorrect'> <h2>You are wrong!</h2>
       <p>The correct answer is ${STORE.currentQuestion.correctAnswer}.</p>
       <button class='js-next-btn' type='submit' name='next-question'>Next question!</button>
     </section>`;
