@@ -10,15 +10,19 @@
   </head>
   <body>
     <!-- the header will store the current score and question number information and possibly an icon-->
-    <header class="row">
-      <img src="images/worldicon1.svg" class="icon col-4" alt="icon of the earth">
-      <ul class="col-6">
-        <li>Question: <span class="questionNumber">0</span><span>/10</span></li>
-        <li>Score: <span class="score">0</span></li>
-      </ul>
+    <header>
+      <div class="col-4 headerIcon">
+        <img src="images/worldicon1.svg" class="icon" alt="icon of the earth">
+      </div>
+      <div class="col-6 headerList">
+        <ul>
+          <li>Question: <span class="questionNumber">0</span><span>/10</span></li>
+          <li>Score: <span class="score">0</span></li>
+        </ul>
+      </div>
     </header>
 
-    <main class="row" id="js-quiz-state" role="main">
+    <main id="js-quiz-state" role="main">
       <div class="questionAnswerForm js-question-Answer-Form"></div>
     </main>
     
