@@ -113,11 +113,11 @@ img.icon.col-12 {
 .mainIcon {
     height: 100px;
     margin-top: 40px;
-    margin-bottom: 20px;
 }
 
 .responseH2 {
-    margin-top: 0px;
+    margin-top: 40px;
+    margin-bottom:40px;
 }
 
 section.js-feedback-correct, 
@@ -147,11 +147,7 @@ section.js-quiz-results {
 }
 
 button.js-restart-btn {
-    background-color:rgba(251, 251, 251, 0.59);
     margin-bottom: 40px;
-    border: none;
-    border-radius: 25px;
-    padding: 20px;
 }
 
 .buttonDiv{
@@ -176,4 +172,9 @@ label [type='radio'] {
 
 header.row {
     margin-top: 20px;
+}
+
+.iconCredit {
+    position: absolute;
+    bottom: 0;
 }
