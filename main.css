@@ -97,14 +97,6 @@ button.restartBtn {
     margin: 0;
 }
 
-img.col-12.questionIcon {
-    height: 50px;
-}
-
-img.col-12.questionIcon {
-    height: 50px;
-}
-
 img.icon.col-12 {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -178,4 +170,8 @@ header.row {
 .iconCredit {
     position: absolute;
     bottom: 0;
+}
+
+.questionIcon {
+    margin-bottom: 40px;
 }

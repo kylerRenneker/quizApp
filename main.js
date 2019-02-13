@@ -153,7 +153,7 @@ function updateSTORE(){
 function generateQuestion(){
   return `
   <section class="js-answer-template">
-  <img src="images/question1.svg" class="mainIcon col-12" alt="icon of the earth">
+  <img src="images/question1.svg" class="questionIcon mainIcon col-12" alt="icon of the earth">
   <form class='row'>
     <fieldset>
       <legend>${STORE.currentQuestion.question}</legend>
