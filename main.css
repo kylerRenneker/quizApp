@@ -67,7 +67,8 @@ label span {
 }
 
 button.startButton,
-button.js-next-btn {
+button.js-next-btn,
+button.restartBtn {
     background-color: rgb(94, 161, 200);
 }
 
