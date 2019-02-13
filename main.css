@@ -168,7 +168,7 @@ header.row {
 }
 
 .iconCredit {
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
