@@ -125,7 +125,7 @@ const STORE = {
 
 function generateIntroView(){
   return `<div class="quizStart js-quiz-start">
-  <h1>Country Quiz</h1>
+  <h1>Capital Quiz</h1>
   <p>Let's test your knowledge on country's capitals!</p>
   <button type="button" name="button" class="startButton">Start Quiz!</button>
 </div>`

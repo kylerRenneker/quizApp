@@ -97,3 +97,15 @@
         margin-top: 50px;
     }
   }
+
+  @media only screen and (max-width: 320px){
+    .mainIcon {
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .questionAnswerForm {
+        font-size: 1.6rem;
+        margin: 5px auto 35px;
+    }
+  }
