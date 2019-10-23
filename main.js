@@ -123,6 +123,8 @@ const STORE = {
   score: 0
 };
 
+console.log(STORE.currentQuestion)
+
 function generateIntroView(){
   return `<div class="quizStart js-quiz-start">
   <h1>Country Quiz</h1>
@@ -135,13 +137,11 @@ function renderIntroView(){
   $('.js-question-Answer-Form').html(generateIntroView());
 }
 
-
 function startQuizOnClick(){
   $('.js-quiz-start').on('click', '.startButton', function(){
     renderQuestionAnswerText();
   })
 }
-
 
 function updateSTORE(){
   INDEX.questionIndex++;

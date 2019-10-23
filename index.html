@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Country Quiz</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="normalize.css">
-  </head>
-  <body>
-    <!-- the header will store the current score and question number information and possibly an icon-->
-    <header class="row">
-      <img src="images/worldicon1.svg" class="icon col-4" alt="icon of the earth">
-      <ul class="col-6">
-        <li>Question: <span class="questionNumber">0</span><span>/10</span></li>
-        <li>Score: <span class="score">0</span></li>
-      </ul>
-    </header>
 
-    <main class="row" id="js-quiz-state" role="main">
-      <div class="questionAnswerForm js-question-Answer-Form"></div>
-    </main>
-    
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Country Quiz</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="normalize.css">
+</head>
+
+<body>
+  <!-- the header will store the current score and question number information and possibly an icon-->
+  <header class="row">
+    <img src="images/worldicon1.svg" class="icon col-4" alt="icon of the earth">
+    <ul class="col-6">
+      <li>Question: <span class="questionNumber">0</span><span>/10</span></li>
+      <li>Score: <span class="score">0</span></li>
+    </ul>
+  </header>
+
+  <main class="row" id="js-quiz-state" role="main">
+    <div class="questionAnswerForm js-question-Answer-Form"></div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 
-    <!-- <img src="images/worldmap-hand.jpg" alt="a world map printed on a pair of hands">
-    <img src="images/worldmap-dot.jpg" alt="a world map composed of dots">
-    <img src="images/worldmap-paint.png" alt="a world map in paint">
-    <img src="images/worldmap-vintage.png" alt="a vintage world map"> -->
-  </body>
+</body>
+
 </html>
