@@ -61,4 +61,51 @@
     ul.col-6{
         float: right;
     }
+
+    .headerList {
+        float: right;
+        text-align: right;
+    }
+
+    .headerIcon{
+        text-align: left;
+    }
+
+    .mainIcon {
+        height: 150px;
+    }
+
+    main {
+        margin-top: 0;
+        top: 50%;
+    }
+
+    .questionAnswerForm{
+        font-size: 2.5rem;
+    }
+
+    label.answerOption {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .answerOption span:hover{
+        background: #ffff0059;
+    }
+
+    .feedback, .results {
+        margin-top: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 320px){
+    .mainIcon {
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .questionAnswerForm {
+        font-size: 1.6rem;
+        margin: 5px auto 35px;
+    }
   }
